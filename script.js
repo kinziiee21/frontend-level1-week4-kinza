@@ -98,3 +98,52 @@ const productData = {
     ]
   }
 };
+
+/* =====================
+   MOBILE SWIPE SUPPORT
+===================== */
+let startX = 0;
+let isDragging = false;
+
+if (track) {
+  track.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+  });
+
+  track.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+
+    const currentX = e.touches[0].clientX;
+    const diff = startX - currentX;
+
+    // swipe threshold
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        slideRightMobile();
+      } else {
+        slideLeftMobile();
+      }
+      isDragging = false;
+    }
+  });
+
+  track.addEventListener("touchend", () => {
+    isDragging = false;
+  });
+}
+
+/* Mobile slide functions */
+function slideRightMobile() {
+  const maxScroll = track.scrollWidth - track.clientWidth;
+  currentPosition += slideWidth;
+  if (currentPosition > maxScroll) currentPosition = maxScroll;
+  track.style.transform = `translateX(-${currentPosition}px)`;
+}
+
+function slideLeftMobile() {
+  currentPosition -= slideWidth;
+  if (currentPosition < 0) currentPosition = 0;
+  track.style.transform = `translateX(-${currentPosition}px)`;
+}
+
