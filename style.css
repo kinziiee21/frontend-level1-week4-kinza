@@ -456,47 +456,33 @@ section {
   }
 }
 
-/* =====================
-   MOBILE SLIDER FIX
-===================== */
+
+/* =====================================
+   MOBILE PRODUCT SLIDER – FINAL FIX
+===================================== */
 @media (max-width: 768px) {
 
-  .product-slider {
-    overflow: hidden;
-  }
-
-  .product-track {
-    transition: transform 0.4s ease;
-    will-change: transform;
-  }
-
-  .slider-item {
-    min-width: 75%; /* shows 1.2 cards like Dove */
-  }
-
-  /* Hide arrows only on mobile */
-  .slider-btn {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-
+  /* Enable native horizontal scroll */
   .product-slider {
     overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
   }
 
+  /* Remove transform-based sliding on mobile */
   .product-track {
     display: flex;
     gap: 16px;
     transform: none !important;
   }
 
+  /* Card width for swipe */
   .slider-item {
-    min-width: 75%;
+    min-width: 80%;
+    flex-shrink: 0;
   }
 
+  /* Hide arrows on mobile */
   .slider-btn {
     display: none;
   }
