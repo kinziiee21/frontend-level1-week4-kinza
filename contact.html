@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PureCare | Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom">
+  <div class="container-fluid position-relative px-4">
+
+    <!-- MOBILE TOGGLER -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- LEFT MENU -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav navbar-left">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <!-- PRODUCTS (MULTI LEVEL) -->
+        <li class="nav-item">
+          <a class="nav-link product-toggle" href="#">Products</a>
+
+          <div class="mega-menu">
+
+            <!-- HAIR CARE -->
+            <div class="menu-section">
+              <div class="menu-title level1">Hair Care</div>
+
+              <div class="submenu level1-menu">
+                <div class="menu-title level2">Shampoo</div>
+                <div class="submenu level2-menu">
+                  <a href="#">For Women</a>
+                  <a href="#">For Men</a>
+                </div>
+
+                <div class="menu-title level2">Conditioner</div>
+                <div class="submenu level2-menu">
+                  <a href="#">For Women</a>
+                  <a href="#">For Men</a>
+                </div>
+
+                <div class="menu-title level2">Hair Oil</div>
+                <div class="submenu level2-menu">
+                  <a href="#">Coconut</a>
+                  <a href="#">Almond</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- SKIN CARE -->
+            <div class="menu-section">
+              <div class="menu-title level1">Skin Care</div>
+              <div class="submenu level1-menu">
+                <a href="#">Body Wash</a>
+                <a href="#">Creams</a>
+                <a href="#">Face Wash</a>
+              </div>
+            </div>
+
+            <!-- BABY CARE -->
+            <div class="menu-section">
+              <div class="menu-title level1">Baby Care</div>
+              <div class="submenu level1-menu">
+                <a href="#">Baby Soap</a>
+                <a href="#">Baby Lotion</a>
+              </div>
+            </div>
+
+          </div>
+        </li>
+	
+	<li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- CENTER LOGO -->
+    <a class="navbar-brand logo-center" href="#">PureCare</a>
+
+    <!-- RIGHT SEARCH -->
+    <div class="nav-search d-none d-lg-block">
+      <input type="text" placeholder="Search">
+    </div>
+
+  </div>
+</nav>
+
+<section class="contact-section">
+  <div class="container py-5">
+<div class="container py-5">
+  <h1 class="text-center mb-4">Contact Us</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+	<div class="contact-card">
+      <form id="contactForm">
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" rows="4" id="message"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+
+<!-- FOOTER -->
+<footer class="bg-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-1 fw-bold">PureCare</p>
+    <p class="mb-2">Gentle care for everyday confidence.</p>
+    <p class="mb-0">&copy; 2025 PureCare. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

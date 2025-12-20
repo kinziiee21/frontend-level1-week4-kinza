@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PureCare | Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom">
+  <div class="container-fluid position-relative px-4">
+
+    <!-- MOBILE TOGGLER -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- LEFT MENU -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav navbar-left">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <!-- PRODUCTS (MULTI LEVEL) -->
+        <li class="nav-item">
+          <a class="nav-link product-toggle" href="#">Products</a>
+
+          <div class="mega-menu">
+
+            <!-- HAIR CARE -->
+            <div class="menu-section">
+              <div class="menu-title level1">Hair Care</div>
+
+              <div class="submenu level1-menu">
+                <div class="menu-title level2">Shampoo</div>
+                <div class="submenu level2-menu">
+                  <a href="#">For Women</a>
+                  <a href="#">For Men</a>
+                </div>
+
+                <div class="menu-title level2">Conditioner</div>
+                <div class="submenu level2-menu">
+                  <a href="#">For Women</a>
+                  <a href="#">For Men</a>
+                </div>
+
+                <div class="menu-title level2">Hair Oil</div>
+                <div class="submenu level2-menu">
+                  <a href="#">Coconut</a>
+                  <a href="#">Almond</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- SKIN CARE -->
+            <div class="menu-section">
+              <div class="menu-title level1">Skin Care</div>
+              <div class="submenu level1-menu">
+                <a href="#">Body Wash</a>
+                <a href="#">Creams</a>
+                <a href="#">Face Wash</a>
+              </div>
+            </div>
+
+            <!-- BABY CARE -->
+            <div class="menu-section">
+              <div class="menu-title level1">Baby Care</div>
+              <div class="submenu level1-menu">
+                <a href="#">Baby Soap</a>
+                <a href="#">Baby Lotion</a>
+              </div>
+            </div>
+
+          </div>
+        </li>
+	
+	<li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- CENTER LOGO -->
+    <a class="navbar-brand logo-center" href="#">PureCare</a>
+
+    <!-- RIGHT SEARCH -->
+    <div class="nav-search d-none d-lg-block">
+      <input type="text" placeholder="Search">
+    </div>
+
+  </div>
+</nav>
+
+<div class="container py-5">
+  <h1 class="text-center mb-5">Our Products</h1>
+<!-- SEARCH BAR -->
+<div class="row mb-4">
+  <div class="col-md-6 mx-auto">
+    <input
+      type="text"
+      id="productSearch"
+      class="form-control"
+      placeholder="Search products..."
+      onkeyup="searchProducts()"
+    >
+  </div>
+</div>
+
+  <div class="row g-4">
+    <div class="col-md-3 col-sm-6 product-item">
+      <div class="product-card">
+        <img src="product1.jpeg" alt="">
+        <h5>Moisturizing Lotion</h5>
+        <p>Deep nourishment for daily care.</p>
+	 <p class="product-price">₹349</p>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 product-item">
+      <div class="product-card">
+        <img src="product2.jpeg" alt="">
+        <h5>Gentle Cleanser</h5>
+        <p>Soft cleansing without dryness.</p>
+	<p class="product-price">₹299</p>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 product-item">
+      <div class="product-card">
+        <img src="product3.jpeg" alt="">
+        <h5>Hydrating Cream</h5>
+        <p>Lightweight hydration for glowing skin.</p>
+	<p class="product-price">₹399</p>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 product-item">
+      <div class="product-card">
+        <img src="product4.jpeg" alt="">
+        <h5>Repair Shampoo</h5>
+        <p>Stronger hair from root to tip.</p>
+	<p class="product-price">₹279</p>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 product-item">
+      <div class="product-card">
+          <img src="product5.jpg" alt="">
+          <h5>Baby Lotion</h5>
+          <p>Gentle baby care</p>
+	  <p class="product-price">₹359</p>
+        </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 product-item">
+      <div class="product-card">
+          <img src="product6.jpg" alt="">
+          <h5>Face Wash</h5>
+          <p>Fresh & clean</p>
+	<p class="product-price">₹269</p>
+
+       </div>
+       </div>
+  </div>
+</div>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+
+<!-- FOOTER -->
+<footer class="bg-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-1 fw-bold">PureCare</p>
+    <p class="mb-2">Gentle care for everyday confidence.</p>
+    <p class="mb-0">&copy; 2025 PureCare. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
