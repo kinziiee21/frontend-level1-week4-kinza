@@ -455,3 +455,49 @@ section {
     display: none;
   }
 }
+
+/* =====================
+   MOBILE SLIDER FIX
+===================== */
+@media (max-width: 768px) {
+
+  .product-slider {
+    overflow: hidden;
+  }
+
+  .product-track {
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+
+  .slider-item {
+    min-width: 75%; /* shows 1.2 cards like Dove */
+  }
+
+  /* Hide arrows only on mobile */
+  .slider-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .product-slider {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .product-track {
+    display: flex;
+    gap: 16px;
+    transform: none !important;
+  }
+
+  .slider-item {
+    min-width: 75%;
+  }
+
+  .slider-btn {
+    display: none;
+  }
+}
