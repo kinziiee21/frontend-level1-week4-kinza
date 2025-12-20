@@ -176,9 +176,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* =====================================================
-   MEGA MENU (CLICK BASED)
-===================================================== */
+/* /* ===== DROPDOWN MENU ===== */
 .dropdown-mega {
   position: relative;
 }
@@ -189,24 +187,31 @@ body {
   top: 72px;
   left: 0;
   width: 100%;
-  background: #fff;
+  background: white;
   padding: 30px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  gap: 40px;
-  z-index: 1000;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  z-index: 999;
 }
 
-.mega-menu.open {
+.mega-menu.show {
   display: flex;
+  gap: 40px;
 }
 
-.mega-column {
-  flex: 1;
-}
-
-.mega-column h6 {
+.menu-section h6 {
   font-weight: 600;
-  margin-bottom: 12px;
+  color: #1a3c6b;
+  margin-bottom: 10px;
+}
+
+.menu-section a {
+  display: block;
+  color: #555;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+.menu-section a:hover {
   color: #1a3c6b;
 }
 
@@ -406,19 +411,28 @@ section {
 /* =====================
    PRODUCT SLIDER
 ===================== */
-.product-slider {
-  overflow: hidden;
+@media (max-width: 768px) {
+  .product-slider {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .product-track {
+    display: flex;
+    gap: 16px;
+    transform: none !important;
+  }
+
+  .slider-item {
+    min-width: 80%;
+    flex-shrink: 0;
+  }
+
+  .slider-btn {
+    display: none;
+  }
 }
 
-.product-track {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease;
-}
-
-.slider-item {
-  min-width: 260px;
-}
 
 /* ARROWS */
 .slider-btn {
@@ -457,32 +471,23 @@ section {
 }
 
 
-/* =====================================
-   MOBILE PRODUCT SLIDER – FINAL FIX
-===================================== */
 @media (max-width: 768px) {
 
-  /* Enable native horizontal scroll */
   .product-slider {
     overflow-x: auto;
-    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Remove transform-based sliding on mobile */
   .product-track {
     display: flex;
     gap: 16px;
     transform: none !important;
   }
 
-  /* Card width for swipe */
   .slider-item {
-    min-width: 80%;
-    flex-shrink: 0;
+    min-width: 75%;
   }
 
-  /* Hide arrows on mobile */
   .slider-btn {
     display: none;
   }
